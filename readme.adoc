@@ -61,3 +61,82 @@ https://discuss.asciidoctor.org[Discuss Asciidoctor,role=external,window=_blank]
 https://discuss.asciidoctor.org[Discuss Asciidoctor^]
 
 https://example.org["Google, Yahoo, Bing^",role=teal]
+
+= Images
+
+== Block
+
+image::image.jpg[]
+
+.100 x 200
+[#img-asd]
+[caption="asd: ",link=https://www.flickr.com/photos/javh/5448336655]
+image::image.jpg[100,200]
+
+image::https://asciidoctor.org/images/octocat.jpg[GitHub mascot]
+
+== Inline
+
+satır image:image.jpg[300,400] içi
+
+== Inline image with positioning role
+
+image:image.jpg[Sunset,150,150,role="left"] Ne güzel bir resim!
+
+= Videos
+
+== Block
+
+video::video_file.mp4[]
+
+video::video_file.mp4[width=640, start=60, end=140, options=autoplay]
+
+== Embedded 
+
+video::rPQoq7ThGAU[youtube]
+
+= Source Code
+
+== Code block with title and syntax highlighting
+
+.main.cpp
+[source,cpp]
+----
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    cout << "Hello, World!";
+    return 0;
+}
+----
+
+== Inline
+
+Output literal monospace text such as `+{backtick}+` by enclosing the text in pluses, then in backticks.
+
+.bash.sh
+[source, bash]
+----
+echo "Hello World"
+----
+
+= Tables
+
+== Table with two columns, a header, and two rows of content
+
+[%header,cols=2*] 
+|===
+|Sütun 1
+|Sütun 2
+
+|sütun 1, satır 1
+|sütun 2, satır 1
+
+|sütun 1, satır 2
+|sütun 2, satır 2
+|===
+
+
+
