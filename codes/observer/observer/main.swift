@@ -23,7 +23,8 @@ class Main {
         subject.unregister(observer: observer2)
 
         subject.changeUSBState(usbType: .usbB)
-
+        
+        subject.unregister(observer: observer1)
     }
 }
 

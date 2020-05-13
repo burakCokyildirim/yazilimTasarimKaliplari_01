@@ -18,19 +18,22 @@ class USBManager: Subject {
 
     func register(observer: Observer) {
         observers.append(observer)
-        print("USBManager: Bir observer eklendi.\n")
+        print("+USBManager: Bir observer eklendi.\n")
     }
 
     func unregister(observer: Observer) {
         if let idx = observers.firstIndex(where: { $0 === observer }) {
             observers.remove(at: idx)
-            print("USBManager: Bir observer silindi.\n")
+            print("-USBManager: Bir observer silindi.\n")
         }
     }
 
     func notify() {
-        print("USBManager: notify\n")
-        observers.forEach({ $0.update(usbA: isConnect_usbA, usbB: isConnect_usbB, usbC: isConnect_usbC)})
+        print("*USBManager: notify\n")
+        observers.forEach { observer in
+            observer.update(usbA: isConnect_usbA, usbB: isConnect_usbB, usbC: isConnect_usbC)
+            
+        }
     }
 
     func changeUSBState(usbType: USBTypes) {

@@ -15,6 +15,6 @@ class USBObserver: Observer {
     }
     
     func update(usbA: Bool, usbB: Bool, usbC: Bool) {
-        print("usbA: \(usbA), usbB: \(usbB), usbC: \(usbC),")
+        print("\tusbA: \(usbA), usbB: \(usbB), usbC: \(usbC)\n")
     }
 }
