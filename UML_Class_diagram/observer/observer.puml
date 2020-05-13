@@ -1,0 +1,186 @@
+
+@startuml
+' STYLE START
+hide empty members
+skinparam shadowing false
+' STYLE END
+class "Observer" as Observer << (P,GoldenRod) protocol >> {
+  +update(usbA:usbB:usbC:)
+
+}
+
+Observer ..|> class 
+
+@enduml
+
+
+@startuml
+' STYLE START
+hide empty members
+skinparam shadowing false
+' STYLE END
+class "Subject" as Subject << (P,GoldenRod) protocol >> {
+  +register(observer:)
+  +unregister(observer:)
+  +notify()
+
+}
+
+Subject ..|> class 
+
+@enduml
+
+
+@startuml
+' STYLE START
+hide empty members
+skinparam shadowing false
+' STYLE END
+class "USBManager" as USBManager {
+  +register(observer:)
+  +unregister(observer:)
+  +notify()
+  +changeUSBState(usbType:)
+
+}
+
+USBManager --|> Subject 
+
+@enduml
+
+
+@startuml
+' STYLE START
+hide empty members
+skinparam shadowing false
+' STYLE END
+class "USBObserver" as USBObserver {
+  +init(subject:)
+  +update(usbA:usbB:usbC:)
+
+}
+
+USBObserver --|> Observer 
+
+@enduml
+
+
+@startuml
+' STYLE START
+hide empty members
+skinparam shadowing false
+' STYLE END
+class "USBTypes" as USBTypes << (E,LightSteelBlue) enum >> {
+
+}
+
+USBTypes -- Int 
+
+@enduml
+
+
+@startuml
+' STYLE START
+hide empty members
+skinparam shadowing false
+' STYLE END
+
+
+
+@enduml
+
+
+@startuml
+' STYLE START
+hide empty members
+skinparam shadowing false
+' STYLE END
+class "Observer" as Observer << (P,GoldenRod) protocol >> {
+  +update(usbA:usbB:usbC:)
+
+}
+
+Observer ..|> class 
+
+@enduml
+
+
+@startuml
+' STYLE START
+hide empty members
+skinparam shadowing false
+' STYLE END
+class "Subject" as Subject << (P,GoldenRod) protocol >> {
+  +register(observer:)
+  +unregister(observer:)
+  +notify()
+
+}
+
+Subject ..|> class 
+
+@enduml
+
+
+@startuml
+' STYLE START
+hide empty members
+skinparam shadowing false
+' STYLE END
+class "USBManager" as USBManager {
+  +register(observer:)
+  +unregister(observer:)
+  +notify()
+  +changeUSBState(usbType:)
+
+}
+
+USBManager --|> Subject 
+
+@enduml
+
+
+@startuml
+' STYLE START
+hide empty members
+skinparam shadowing false
+' STYLE END
+class "USBObserver" as USBObserver {
+  +init(subject:)
+  +update(usbA:usbB:usbC:)
+
+}
+
+USBObserver --|> Observer 
+
+@enduml
+
+
+@startuml
+' STYLE START
+hide empty members
+skinparam shadowing false
+' STYLE END
+class "USBTypes" as USBTypes << (E,LightSteelBlue) enum >> {
+
+}
+
+USBTypes -- Int 
+
+@enduml
+
+
+@startuml
+' STYLE START
+hide empty members
+skinparam shadowing false
+' STYLE END
+class "Main" as Main {
+  +main()
+
+}
+
+
+
+@enduml
+
