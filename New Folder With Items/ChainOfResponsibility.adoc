@@ -1,0 +1,13 @@
+== [underline]#Chain Of Responsibility#
+
+=== Tanım:
+* Yapılacak işlemi birden fazla sınıf arasından hangisinin gerçekleştireceğine karar verir.
+* Amacı aynı görevi üstlenen nesnelerin birbirinden en az miktarda haberdar olmasıdır. (Lose Coupled - Gevşek Bağlı)
+
+=== Örnek
+
+=== UML:
+
+=== Neden Kullandım?
+
+=== Kod:

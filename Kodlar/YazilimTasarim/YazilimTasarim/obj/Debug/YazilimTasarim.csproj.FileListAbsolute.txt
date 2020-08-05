@@ -1,0 +1,21 @@
+/Users/burakcokyildirim/Documents/ytk/Kodlar/YazilimTasarim/YazilimTasarim/obj/Debug/actool/_PartialAppManifest.items
+/Users/burakcokyildirim/Documents/ytk/Kodlar/YazilimTasarim/YazilimTasarim/obj/Debug/actool/_BundleResourceWithLogicalName.items
+/Users/burakcokyildirim/Documents/ytk/Kodlar/YazilimTasarim/YazilimTasarim/obj/Debug/ibtool-manifests/Main.storyboardc
+/Users/burakcokyildirim/Documents/ytk/Kodlar/YazilimTasarim/YazilimTasarim/obj/Debug/ibtool-manifests/MainMenu.nib
+/Users/burakcokyildirim/Documents/ytk/Kodlar/YazilimTasarim/YazilimTasarim/obj/Debug/ibtool-manifests/LoginWindow.nib
+/Users/burakcokyildirim/Documents/ytk/Kodlar/YazilimTasarim/YazilimTasarim/obj/Debug/ibtool-manifests/MainWindow.nib
+/Users/burakcokyildirim/Documents/ytk/Kodlar/YazilimTasarim/YazilimTasarim/obj/Debug/ibtool/MainWindow.nib
+/Users/burakcokyildirim/Documents/ytk/Kodlar/YazilimTasarim/YazilimTasarim/obj/Debug/ibtool/MainMenu.nib
+/Users/burakcokyildirim/Documents/ytk/Kodlar/YazilimTasarim/YazilimTasarim/obj/Debug/ibtool/Main.storyboardc/MainMenu.nib
+/Users/burakcokyildirim/Documents/ytk/Kodlar/YazilimTasarim/YazilimTasarim/obj/Debug/ibtool/Main.storyboardc/XfG-lQ-9wD-view-m2S-Jp-Qdl.nib
+/Users/burakcokyildirim/Documents/ytk/Kodlar/YazilimTasarim/YazilimTasarim/obj/Debug/ibtool/Main.storyboardc/NSWindowController-B8D-0N-5wS.nib
+/Users/burakcokyildirim/Documents/ytk/Kodlar/YazilimTasarim/YazilimTasarim/obj/Debug/ibtool/Main.storyboardc/Info.plist
+/Users/burakcokyildirim/Documents/ytk/Kodlar/YazilimTasarim/YazilimTasarim/obj/Debug/ibtool/LoginWindow.nib
+/Users/burakcokyildirim/Documents/ytk/Kodlar/YazilimTasarim/YazilimTasarim/obj/Debug/YazilimTasarim.csproj.CoreCompileInputs.cache
+/Users/burakcokyildirim/Documents/ytk/Kodlar/YazilimTasarim/YazilimTasarim/bin/Debug/Yazılım Kalıpları.exe
+/Users/burakcokyildirim/Documents/ytk/Kodlar/YazilimTasarim/YazilimTasarim/bin/Debug/Yazılım Kalıpları.pdb
+/Users/burakcokyildirim/Documents/ytk/Kodlar/YazilimTasarim/YazilimTasarim/obj/Debug/ibtool-manifests/ChainOfResponsiblityWindow.nib
+/Users/burakcokyildirim/Documents/ytk/Kodlar/YazilimTasarim/YazilimTasarim/obj/Debug/ibtool/ChainOfResponsiblityWindow.nib
+/Users/burakcokyildirim/Documents/ytk/Kodlar/YazilimTasarim/YazilimTasarim/obj/Debug/Yazılım Kalıpları.exe
+/Users/burakcokyildirim/Documents/ytk/Kodlar/YazilimTasarim/YazilimTasarim/obj/Debug/Yazılım Kalıpları.pdb
+/Users/burakcokyildirim/Documents/ytk/Kodlar/YazilimTasarim/YazilimTasarim/obj/Debug/YazilimTasarim.csprojAssemblyReference.cache

@@ -1,0 +1,34 @@
+﻿<Properties StartupConfiguration="{046602A0-835A-41BA-A3B5-A22D52888D39}|Default">
+  <MonoDevelop.Ide.ItemProperties.YazilimTasarim PreferredExecutionTarget="Test1" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="YazilimTasarim/Windows/ChainOfResponsiblityWindowController.cs">
+    <Files>
+      <File FileName="YazilimTasarim/Windows/ChainOfResponsiblityWindowController.cs" Line="56" Column="1" />
+      <File FileName="YazilimTasarim/ChainOfResponsibility/LoginHandler.cs" />
+      <File FileName="YazilimTasarim/ChainOfResponsibility/RegisterHandler.cs" />
+      <File FileName="YazilimTasarim/ChainOfResponsibility/MainHandler.cs" />
+      <File FileName="YazilimTasarim/ChainOfResponsibility/SettingsHandler.cs" />
+      <File FileName="YazilimTasarim/ChainOfResponsibility/Handler.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="YazilimTasarim" expanded="True">
+            <Node name="YazilimTasarim" expanded="True">
+              <Node name="Adapter" expanded="True" />
+              <Node name="ChainOfResponsibility" expanded="True" />
+              <Node name="Windows" expanded="True">
+                <Node name="ChainOfResponsiblityWindowController.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

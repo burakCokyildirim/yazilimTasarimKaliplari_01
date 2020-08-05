@@ -1,0 +1,15 @@
+---
+
+== [underline]#Single Responsibility#
+
+=== Tanım:
+* as
+
+=== Örnek
+
+=== UML:
+
+=== Neden Kullandım?
+
+=== Kod:
+

@@ -1,0 +1,122 @@
+== [underline]#Adapter#
+
+=== Tanım:
+
+* Mevcut yapıya dışarıdan başka bir yapının uygulamanmasını kolaylaştıran bir tasarım desenidir.
+* Adapter'ın görevi uyumsuz olan sınıfın mevcut yapıya eklenmesini kolaylaştırmaktır.
+
+
+=== Örnek 
+Farklı servis sağlayıcıları ile login olabilen bir uygulama.
+
+=== UML: 
+[uml,file="adapter-uml.png"]
+--
+@startuml
+
+interface ILoginProvider {
+    + LoginWithToken(token:string)
+}
+class FacebookLoginProvider {
+    + LoginWithToken(token:string)
+}
+class GoogleLoginProvider {
+    + LoginWithBase64Token(base64Token:string)
+}
+class GoogleAdapter {
+    - provider : GoogleLoginProvider
+    + GoogleAdapter(provider:GoogleLoginProvider)
+    + LoginWithToken(token:string)
+    
+}
+
+ILoginProvider <|-- GoogleAdapter
+GoogleAdapter *-- GoogleLoginProvider 
+ILoginProvider <|-left- FacebookLoginProvider
+
+
+note left of GoogleAdapter::LoginWithToken
+    GoogleAdapter sınıfındaki LoginWithToken metodu,
+    önce token string'ini base64'e çevirir ve 
+    GoogleLoginProvider'ın LoginWithBase64 
+    metodunu çağırır.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    “”base64Token = Convert.Base64(token)“”
+    “”provider.LoginWithBase64Token(base64Token)“”
+end note
+
+@enduml
+--
+
+=== Neden Kullandım?
+* Mevcut uygulamamda kullanıcı Facebook hesabı ile login olabiliyor iken daha sonradan Google hesabı ile de login olabilmesi için özellik eklenmesi istendi.
+* Google Api'si elimdeki mevcut token'ı base64 halde istediği için mevcut sisteme uyum sağlayabilen bir adapter geliştirdim. 
+* Sistemime uyumsuz olan GoogleLoginProvider'ı GoogleAdapter sayesinde uyumlu hale getirdim.
+
+=== Kod:
+
+[source,csharp]
+----
+
+public void Main()
+{
+    // ILoginProvider provider = new FacebookLoginProvider(); // <1>
+    ILoginProvider provider = new GoogleAdapter(new GoogleLoginProvider()); // <2>
+
+    provider.LoginWithToken(token: "testToken1234689"); // <3>
+}
+
+public interface ILoginProvider 
+{
+    void LoginWithToken(string token); // <4>
+}
+
+public class FacebookLoginProvider: ILoginProvider // <5>
+{
+    public void LoginWithToken(string token)
+    {
+        MessageBox.Show($"Facebook ile login olundu. Token: {token}", "Bilgi");
+    }
+}
+    
+public class GoogleLoginProvider // <6>
+{
+    public void LoginWithBase64Token(string base64Token)
+    {
+        MessageBox.Show($"Google ile login olundu. Token: {base64Token}", "Bilgi");
+    }
+}
+
+public class GoogleAdapter: ILoginProvider // <7>
+{
+    private GoogleLoginProvider provider;
+
+    public GoogleAdapter(GoogleLoginProvider provider) // <8>
+    {
+        this.provider = provider;
+    }
+
+    public void LoginWithToken(string token) // <9>
+    {
+        var base64Token = Convert.ToBase64String(Encoding.UTF8.GetBytes(token));
+
+        Provider.LoginWithBase64Token(base64Token);
+    }
+}
+----
+
+<1> Facebook login sağlayıcısının tanımlanması (Son hali ile yorum satırı). 
+<2> Google login sağlayıcısının Adapter ile tanımlanması.
+<3> Sağlayıcıdan token ile login olma işlevini çağırma.
+<4> Login sağlayıcıların ve adapterların implement edebileceği 'ILoginProvider' interface'inin, Login olma işlemini gerçekleştiren metod. 
+<5> 'ILoginProvider' interface'ini implement eden contrete sınıf, Facebook login sağlayıcısı.
+<6> Login için token'ı base64 halinde isteyen Google login sağlayıcısı.
+<7> Mevcut token'ı GoogleLoginProvider için uygun hale getiren Adapter. ILoginProvider'ı implement eder.
+<8> Adapter'ın constructor'ı, GoogleLoginProvider'ı alır.
+<9> Gelen token'ı base64'e çevirerek GoogleLoginProvider'ın login metodunu çağırır.
+
+=== Ekran Görüntüleri
+---
+image::adapter1.png[]
+image::adapter2.png[]
+image::adapter3.png[]
